@@ -30,6 +30,7 @@ As a user interested to find a vacation destination, I want to search major citi
 **Dependencies** 
 City search data are available and accessible. 
 
+
 REQUIREMENTS 1.1 : *Book a flight*  
 
 **Scenario**
@@ -37,8 +38,8 @@ As a user interested in knowing flight details, I want to search best possible f
 
 **Dependencies**
 Flight Fare data are available and accessible. 
- 
-
+   
+   
 REQUIREMENT 1.2 : *Booking a hotel*  
 
 **Scenario**
