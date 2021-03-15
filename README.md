@@ -5,7 +5,7 @@
 ###### Group Members: Jayashree Kodukula, Apoorva Navlay, Siva Praveena Tati  
 
 ## Introduction  
-Do you remember when was your last vacation? Do you know where to go? Our TravelAdvisor can help you choose a destination which provides information on Best Vacation Spots preferred by the Travellor's.
+Do you remember when was your last vacation? Do you know where to go? Our TravelAdvisor can help you choose a destination which provides information on Best Vacation Spots preferred by the Travellers.
 
 - Provides you country codes for easy search by category 
 - Best Tourist Destinations to visit in summer 
