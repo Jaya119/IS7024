@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TravelAdvisor</title>
+    <title>@ViewData["Title"] - Travel Advisor</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -11,25 +11,42 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">TravelAdvisor</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Travel Advisor</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <img src="~/Images/Travel_Advisor.jpg" alt="logo" width="90" height="90">
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About Us</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Admin">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Help">Help</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
+        <div class="jumbotron text-center" style="background-color:beige" src="~/Images/Travel_Advisor.jpg">
+            <h1 class="display-4" style="color:darkblue"><strong>Travel Advisor</strong></h1>
+            <img alt="logo" src="~/Images/Travel_Advisor.jpg" class="img-fluid" width="150" height="150">
+        </div>
+
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -37,7 +54,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - TravelAdvisor - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2021 - Travel Advisor - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 

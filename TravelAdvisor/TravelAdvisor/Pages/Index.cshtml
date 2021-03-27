@@ -4,7 +4,38 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="row py-lg-3">
+        <h2 class="display-4" style="color:darkblue">Book your next travel destination today!</h2>
+    </div>
+    <div class="row text-center">
+        <p class="lead">Happiness is a way of travel,let travel advisor choose your happiness</p>
+    </div>
+</div>
+<div class="card-group">
+    <div class="card">
+        <img src="~/Images/house_slide1.jpg" class="card-img-top" alt="Buy">
+        <div class="card-body">
+            <h5 class="card-title">Search by Country</h5>
+            <p class="card-text">Find your Dream Home from our extensive listing and powerful visualizations.We can match you with a house you will want to call home.</p>
+            <a href="/Dwellings/Search" class="btn btn-primary">Search Homes</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="~/Images/agents_pic.jpg" class="card-img-top" alt="Agents">
+        <div class="card-body">
+            <br />
+            <h5 class="card-title">Search by Hotel</h5>
+            <p class="card-text">Get in touch with our agents who specialise in Real Estate industry to help you out with your custom needs. </p>
+            <a href="/Agents/List" class="btn btn-primary">Connect to Agent</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="~/Images/salesoffice_pic.jpg" class="card-img-top" alt="Sales Office">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">You can also visit any of our sales office nearrby your location to discuss about your specific needs. We would be happy to assist you in person.</p>
+            <a href="/SalesOffices/List" class="btn btn-primary">Sales Office List</a>
+        </div>
+    </div>
 </div>
