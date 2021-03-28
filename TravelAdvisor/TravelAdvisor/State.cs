@@ -4,7 +4,7 @@
 //
 //    using QuickType;
 //
-//    var welcome = Welcome.FromJson(jsonString);
+//    var state = State.FromJson(jsonString);
 
 namespace QuickType
 {
@@ -15,7 +15,7 @@ namespace QuickType
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class Welcome
+    public partial class State
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -24,14 +24,14 @@ namespace QuickType
         public string Abbreviation { get; set; }
     }
 
-    public partial class Welcome
+    public partial class State
     {
-        public static Welcome[] FromJson(string json) => JsonConvert.DeserializeObject<Welcome[]>(json, QuickType.Converter.Settings);
+        public static State[] FromJson(string json) => JsonConvert.DeserializeObject<State[]>(json, QuickType.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this State[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
     }
 
     internal static class Converter
