@@ -4,7 +4,46 @@
     ViewData["Title"] = "Home page"; 
 
 }
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
+    /* Style the search field */
+    form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+    }
+
+    /* Style the submit button */
+    form.example button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none; /* Prevent double borders */
+        cursor: pointer;
+    }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+    /* Clear floats */
+    form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+</style>
 <div class="container">
     <div class="row py-lg-3">
         <h2 class="display-4" style="color:darkblue">Book your next travel destination today!</h2>
@@ -16,11 +55,46 @@
 <div class="card-group">
     <div class="card">
         <img src="~/Images/us states.jpg" class="card-img-top" alt="Buy">
+        <br />
         <div class="text-center">
             <h5 class="card-title">Search by State</h5>
             <p class="card-text">You can search your favorite vacations spots and hotel reviews in various states</p>
-            <hr />
-            
+            <form class="example" a href="https://worldpopulationreview.com/static/states/abbr-name-list.json">
+                
+                <label for="country">Search</label>
+                <select id="state" name="state">
+                    <option value="iowa">Iowa</option>
+                    <option value="illinois">Illinois</option>
+                    <option value="indiana">Indiana</option>
+                    <option value="kansas">Kansas</option>
+                    <option value="michigan">Michigan</option>
+                    <option value="minnesota">Minnesota</option>
+                    <option value="missouri">Missouri</option>
+                    <option value="north dakota">North Dakota</option>
+                    <option value="nebraska">Nebraska</option>
+                    <option value="ohio">Ohio</option>
+                    <option value="south dakota">South Dakota</option>
+                    <option value="wisconsin">Wisconsin</option>
+                    <option value="connecticut">Connecticut</option>
+                    <option value="massachusetts">Massachusetts</option>
+                    <option value="maryland">Maryland</option>
+                    <option value="maine">Maine</option>
+                    <option value="new hampshire">New Hampshire</option>
+                    <option value="new jersey">New Jersey</option>
+                    <option value="new york">New York</option>
+                    <option value="pennsylvania">Pennsylvania</option>
+                    <option value="rhode island">Rhode Island</option>
+                    <option value="virginia">Virginia</option>
+                    <option value="vermont">Vermont</option>
+                    <option value="west virginia">West Virgina</option>
+                    <option value="arizona">Arizona</option>
+                    <option value="colorado">Colorado</option>
+                    <option value="new mexico">New Mexico</option>
+                </select>
+                <a href="/Agents/List" class="btn btn-primary">Submit</a>
+            </form>
+
+
         </div>
     </div>
     <div class="card">
