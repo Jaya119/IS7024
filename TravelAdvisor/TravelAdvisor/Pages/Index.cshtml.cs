@@ -19,10 +19,28 @@ namespace TravelAdvisor.Pages
 
         public void OnGet()
         {
-            String key=System.IO.File.ReadAllText("CitiesAPIKey.txt");
-            String citiesdata= webClient.DownloadString("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json" + key);
+            
+            String key = System.IO.File.ReadAllText("CitiesAPIKey.txt");
+            String citiesdata = webClient.DownloadString("https://worldpopulationreview.com/static/states/abbr-name-list.json" + key);
+            QuickType.Welcome cities = QuickType.Welcome.FromJson(citiesdata);
+            long name = 0
+            foreach (QuickType.Datum city in cities.Data)
+            {
+
+                name = city.name
 
 
+            }
+            if (name < 1)
+            {
+
+                ViewData["CityMessage"] = "City doesnt exist";
+            }
+            else
+            {
+                viewData["CityMessage"] = "Heres your favorite city!";
+
+            }
         }
     }
 }
