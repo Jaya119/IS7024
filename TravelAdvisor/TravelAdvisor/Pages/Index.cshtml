@@ -2,6 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var welcomes = (QuickType.Welcome[])ViewData["Welcome"];
 }
 
 <div class="container">
@@ -15,6 +16,29 @@
 <div class="card-group">
     <div class="card">
         <img src="~/Images/us states.jpg" class="card-img-top" alt="Buy">
+
+        <table border="1" width="90%">
+
+            <tr><th>name</th><th>abbreviation</th></tr>
+            @{ foreach (QuickType.Welcome welcome in welcomes) {
+
+                <tr>
+
+                    <td>@welcome.Name </td>
+
+                    <td>@welcome.Abbreviation</td>
+
+                    
+
+                </tr>
+
+               }
+
+            }
+
+        </table>
+
+
         <div class="card-body">
             <h5 class="card-title">Search by State</h5>
             <p class="card-text">Find your Dream Vacation from our extensive listing and powerful visualizations.We can match you with right place and price.</p>

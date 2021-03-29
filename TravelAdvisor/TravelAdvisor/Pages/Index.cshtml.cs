@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using QuickType;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace TravelAdvisor.Pages
@@ -19,7 +21,13 @@ namespace TravelAdvisor.Pages
 
         public void OnGet()
         {
-
+            using (var webClient = new WebClient())
+                {
+               
+string jsonString = webClient.DownloadString("https://worldpopulationreview.com/static/states/abbr-name-list.json");
+                var welcome = Welcome.FromJson(jsonString);
+                ViewData["Welcome"]= welcome;
         }
     }
 }
+    }
