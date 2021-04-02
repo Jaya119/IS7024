@@ -17,21 +17,47 @@ namespace QuickType
 
     public partial class Welcome
     {
-        [JsonProperty("name")]
+        [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
+        public long? Id { get; set; }
+
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
-        [JsonProperty("abbreviation")]
-        public string Abbreviation { get; set; }
+       
+
+        [JsonProperty("city", NullValueHandling = NullValueHandling.Ignore)]
+        public string City { get; set; }
+
+        [JsonProperty("state", NullValueHandling = NullValueHandling.Ignore)]
+        public string State { get; set; }
+
+
+        [JsonProperty("country", NullValueHandling = NullValueHandling.Ignore)]
+        public string Country { get; set; }
+
+
+        [JsonProperty("phone", NullValueHandling = NullValueHandling.Ignore)]
+        public string Phone { get; set; }
+
+        [JsonProperty("website_url", NullValueHandling = NullValueHandling.Ignore)]
+        public Uri WebsiteUrl { get; set; }
+
     }
 
     public partial class Welcome
     {
-        public static Welcome[] FromJson(string json) => JsonConvert.DeserializeObject<Welcome[]>(json, QuickType.Converter.Settings);
+        public static Welcome[] FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<Welcome[]>(json, QuickType.Converter.Settings);
+        }
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this Welcome[] self)
+        {
+            return JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        }
     }
 
     internal static class Converter
@@ -47,4 +73,3 @@ namespace QuickType
         };
     }
 }
-
