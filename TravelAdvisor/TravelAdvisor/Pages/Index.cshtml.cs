@@ -1,4 +1,11 @@
+
 ﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
+using QuickType;
+using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -28,6 +35,7 @@ namespace TravelAdvisor.Pages
 
         public void OnGet()
         {
+
             isSearchCity = false;
         }
        
@@ -46,6 +54,6 @@ namespace TravelAdvisor.Pages
             }
 
             isSearchCity = true;
+
         }
-}
-    }
+}}

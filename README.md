@@ -14,7 +14,7 @@ Do you remember when was your last vacation? Do you know where to go? Our Travel
 - Hotel Reviews  
 ---
 ## Data Feeds  
-- [World Countries](https://datahub.io/core/country-list)  
+- [US States](https://worldpopulationreview.com/states/state-abbreviations)  
 - [Airport Codes](https://datahub.io/core/airport-codes)
 - [United Airline Data](https://data.world/adamhelsinger/united-airlines-data)
 - [Campgrounds in US and CANADA](https://data.world/caroline/campgrounds)
