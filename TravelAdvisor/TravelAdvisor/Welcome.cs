@@ -23,7 +23,7 @@ namespace QuickType
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
-       
+
 
         [JsonProperty("city", NullValueHandling = NullValueHandling.Ignore)]
         public string City { get; set; }

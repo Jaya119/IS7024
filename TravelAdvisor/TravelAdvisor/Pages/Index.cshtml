@@ -110,34 +110,38 @@
                 
                 <label for="country">Search</label>
                 <select id="state" name="state">
-                    <option value="IA">Iowa</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="KS">Kansas</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MO">Missouri</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="OH">Ohio</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MD">Maryland</option>
-                    <option value="ME">Maine</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NY">New York</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="VI">Virginia</option>
-                    <option value="VT">Vermont</option>
-                    <option value="WV">West Virgina</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="CO">Colorado</option>
-                    <option value="NM">New Mexico</option>
+                    @*<option value="IA">Iowa</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="KS">Kansas</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MO">Missouri</option>
+        <option value="ND">North Dakota</option>
+        <option value="NE">Nebraska</option>
+        <option value="OH">Ohio</option>
+        <option value="SD">South Dakota</option>
+        <option value="WI">Wisconsin</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MD">Maryland</option>
+        <option value="ME">Maine</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NY">New York</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="VI">Virginia</option>
+        <option value="VT">Vermont</option>
+        <option value="WV">West Virgina</option>
+        <option value="AZ">Arizona</option>
+        <option value="CO">Colorado</option>
+        <option value="NM">New Mexico</option>*@
+                    <option value="">Please Select</option>
+                    @foreach (var city in Model.CitiesList)
+                    {
+                <option value="@city"> @city </option>            }
                 </select>
                 <a href="/DataIntegration" class="btn btn-primary">Submit</a>
             </form>
