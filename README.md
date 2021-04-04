@@ -4,7 +4,7 @@
 
 ###### Group Members: Jayashree Kodukula, Apoorva Navlay, Siva Praveena Tati
 
-### Weekly Meetings: 
+##### Weekly Meetings: 
 Wednesday 3-4pm | Friday 3-4pm
 
 ## Introduction  
