@@ -4,6 +4,8 @@
     ViewData["Title"] = "Home page";
 
     var Welcome = (QuickType.Welcome[])ViewData["Welcome"];
+    var states = (QuickType.State[])ViewData["State"];
+
 
 }
 <style>
@@ -34,9 +36,9 @@
         cursor: pointer;
     }
 
-        form.example button:hover {
+    form.example button:hover {
             background: #0b7dda;
-        }
+    }
 
 
     /* Clear floats */
@@ -60,17 +62,17 @@
     <div class="card">
 
         <img src="~/Images/eatery.jpg" class="card-img-top" alt="Buy">
-        <div class="card-body">
+        <div class="text-center">
             <br />
             <h5 class="card-title">Search by City</h5>
-            <p class="card-text">Any travel is incomplete without finding good eateries. Travel Advisory provides you the best eateries in each city.</p>
+            <p class="card-text">Any travel is incomplete without exploring good places to have some fun with your friends. Travel Advisory provides you the best breweries in each city.</p>
             <form action="" method="POST" style="margin-top: 50px;">
                 <div class="form-group">
                     <label style="font-size:20px;" class="control-label" for="CountrySearch"><strong>Enter City</strong></label>
-                    <input type="text" class="form-control" name="BreweryCity" id="BreweryCity" style="width:50%" />
+                    <input type="text" class="form-control" name="BreweryCity" id="BreweryCity" style="width:50%; margin-left:auto; margin-right:auto" />
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Search for Eateries" class="btn btn-primary" />
+                    <input type="submit" value="Search for Breweries" class="btn btn-primary" />
                 </div>
             </form>
 
@@ -87,16 +89,13 @@
                     </thead>
                     <tbody>
 
-                        @foreach (var eatery in Welcome)
+                        @foreach (QuickType.Welcome breweries in Welcome)
                         {
                             <tr>
-                                <td>@eatery.City</td>
-                                <td>@eatery.Phone</td>
-                                <td>@eatery.Name</td>
-
+                                <td>@breweries.City</td>
+                                <td>@breweries.Phone</td>
+                                <td>@breweries.Name</td>
                             </tr>
-
-                        }
                         }
                     </tbody>
                 </table>
@@ -107,43 +106,19 @@
             <h5 class="card-title">Search by State</h5>
             <p class="card-text">You can find your favorite vacations spots and hotel reviews in various states</p>
             <form method="get" class="" a href="https://worldpopulationreview.com/static/states/abbr-name-list.json">
-                
                 <label for="country">Search</label>
                 <select id="state" name="state">
-                    <option value="IA">Iowa</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="KS">Kansas</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MO">Missouri</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="OH">Ohio</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MD">Maryland</option>
-                    <option value="ME">Maine</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NY">New York</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="VI">Virginia</option>
-                    <option value="VT">Vermont</option>
-                    <option value="WV">West Virgina</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="CO">Colorado</option>
-                    <option value="NM">New Mexico</option>
+                    @foreach (QuickType.State state in states)
+                    {
+                    <option value=@state.Abbreviation>@state.Name</option>
+                    }
                 </select>
                 <a href="/DataIntegration" class="btn btn-primary">Submit</a>
             </form>
+            <br/>
         </div>
     </div>
-    <div class="card">
+    <div class="text-center">
         <img src="~/Images/hotels.jpg" class="card-img-top" alt="Agents">
         <div class="card-body">
             <br />
@@ -154,12 +129,13 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="text-center">
         <img src="~/Images/vacationspots.jpg" class="card-img-top" alt="Sales Office">
         <div class="card-body">
             <h5 class="card-title">List of vacation Spots</h5>
             <p class="card-text">TripAdvisor has done all work for you, you can find best vacation spots here.</p>
             <a href="/SalesOffices/List" class="btn btn-primary">Click here</a>
         </div>
+    </div>
     </div>
 </div>
