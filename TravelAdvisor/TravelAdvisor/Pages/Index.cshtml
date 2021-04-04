@@ -87,17 +87,17 @@
                     </thead>
                     <tbody>
 
-                        @foreach (var eatery in Welcome)
+                        @foreach (QuickType.Welcome breweries in Welcome)
                         {
                             <tr>
-                                <td>@eatery.City</td>
-                                <td>@eatery.Phone</td>
-                                <td>@eatery.Name</td>
+                                <td>@breweries.City</td>
+                                <td>@breweries.Phone</td>
+                                <td>@breweries.Name</td>
 
                             </tr>
 
                         }
-                        }
+             
                     </tbody>
                 </table>
             }

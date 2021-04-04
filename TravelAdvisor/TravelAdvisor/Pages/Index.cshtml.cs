@@ -4,15 +4,12 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using QuickType;
-using System;
-
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using QuickType;
+
+
 
 
 namespace TravelAdvisor.Pages
@@ -28,15 +25,15 @@ namespace TravelAdvisor.Pages
         [BindProperty]
         public string BreweryCity { get; set; }
 
-        public bool isSearchCity { get; set; }
+        public bool IsSearchCity { get; set; }
 
-        public string Url { get; set; }
+        public new string Url { get; set; }
 
 
         public void OnGet()
         {
 
-            isSearchCity = false;
+            IsSearchCity = false;
         }
        
         public void OnPost()
@@ -53,7 +50,7 @@ namespace TravelAdvisor.Pages
                 ViewData["Welcome"] = welcome;
             }
 
-            isSearchCity = true;
+            IsSearchCity = true;
 
         }
 }}
