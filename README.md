@@ -2,20 +2,21 @@
 
 ##### Design Document
 
-###### Group Members: Jayashree Kodukula, Apoorva Navlay, Siva Praveena Tati  
+###### Group Members: Jayashree Kodukula, Apoorva Navlay, Siva Praveena Tati
+
+### Weekly Meetings: 
+Wednesday 3-4pm | Friday 3-4pm
 
 ## Introduction  
 Do you remember when was your last vacation? Do you know where to go? Our TravelAdvisor can help you choose a destination which provides information on Best Vacation Spots preferred by the Travellers.
 
 - Provides you country codes for easy search by category 
 - Best Tourist Destinations to visit in summer 
-- Vacation packages  
-- Best fares for flights 
+- Breweries in US
 - Hotel Reviews  
 ---
 ## Data Feeds  
 - [US States](https://worldpopulationreview.com/states/state-abbreviations)  
-- [Airport Codes](https://datahub.io/core/airport-codes)
 - [United Airline Data](https://data.world/adamhelsinger/united-airlines-data)
 - [Campgrounds in US and CANADA](https://data.world/caroline/campgrounds)
 - [Hotel Reviews in US](https://data.world/datafiniti/hotel-reviews)  
@@ -31,16 +32,16 @@ As a user interested to find a vacation destination, I want to search major citi
 City search data are available and accessible. 
 
 
-REQUIREMENTS 1.1 : *Book a flight*  
+REQUIREMENTS 1.1 : *Finding a Brewery*  
 
 **Scenario**
 As a user interested in knowing flight details, I want to search best possible flight fares for the trip.
 
 **Dependencies**
-Flight Fare data are available and accessible. 
+Brewery Data are available and accessible. 
    
    
-REQUIREMENT 1.2 : *Booking a hotel*  
+REQUIREMENT 1.2 : *Hotel Reviews*  
 
 **Scenario**
 As a user interested in Booking a Hotel, I want to know the Hotel Reviews in United States for my travel.
@@ -57,7 +58,3 @@ Hotel Reviews Data are available and accessible.
 2. **FrontEnd Developer** – *Apoorva Navlay* 
 
 3. **Integration Developer** – *Siva Praveena Tati* 
-
-### Weekly Meetings:
-Wednesday 3-4pm  
-Friday 3-4pm
