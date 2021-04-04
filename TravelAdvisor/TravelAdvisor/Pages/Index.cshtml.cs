@@ -32,7 +32,7 @@ namespace TravelAdvisor.Pages
 
 
 
-        public readonly string[] CitiesList = { "Iowa", "Illinois", "Indiana", "Kansas", "Michigan", "Minnesota", "Missouri", "North Dakota", "Nebraska", "Ohio", "South Dakota", "Wisconsin", "Connecticut", "Delaware", "Massachusetts", "Maryland", "Maine", "New Hampshire", "New Jersey", "New York", "Pennsylvania", "Rhode Island", "Virginia", "Vermont", "West Virgina", "Arizona", "Colorado", "New Mexico" };
+        public readonly string[] StatesList = { "Iowa", "Illinois", "Indiana", "Kansas", "Michigan", "Minnesota", "Missouri", "North Dakota", "Nebraska", "Ohio", "South Dakota", "Wisconsin", "Connecticut", "Delaware", "Massachusetts", "Maryland", "Maine", "New Hampshire", "New Jersey", "New York", "Pennsylvania", "Rhode Island", "Virginia", "Vermont", "West Virgina", "Arizona", "Colorado", "New Mexico" };
 
 
 
