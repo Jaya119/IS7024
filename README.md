@@ -4,9 +4,6 @@
 
 ###### Group Members: Jayashree Kodukula, Apoorva Navlay, Siva Praveena Tati
 
-##### Weekly Meetings: 
-Wednesday 3-4pm | Friday 3-4pm
-
 ## Introduction  
 Do you remember when was your last vacation? Do you know where to go? Our TravelAdvisor can help you choose a destination which provides information on Best Vacation Spots preferred by the Travellers.
 
@@ -58,3 +55,6 @@ Hotel Reviews Data are available and accessible.
 2. **FrontEnd Developer** – *Apoorva Navlay* 
 
 3. **Integration Developer** – *Siva Praveena Tati* 
+
+##### Weekly Meetings: 
+Wednesday 3-4pm | Friday 3-4pm
