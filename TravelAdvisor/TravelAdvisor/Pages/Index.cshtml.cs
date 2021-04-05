@@ -28,6 +28,12 @@ namespace TravelAdvisor.Pages
         public new string Url { get; set; }
 
 
+
+
+        public readonly string[] StatesList = { "Iowa", "Illinois", "Indiana", "Kansas", "Michigan", "Minnesota", "Missouri", "North Dakota", "Nebraska", "Ohio", "South Dakota", "Wisconsin", "Connecticut", "Delaware", "Massachusetts", "Maryland", "Maine", "New Hampshire", "New Jersey", "New York", "Pennsylvania", "Rhode Island", "Virginia", "Vermont", "West Virgina", "Arizona", "Colorado", "New Mexico" };
+
+
+
         public void OnGet()
         {
 
@@ -43,8 +49,8 @@ namespace TravelAdvisor.Pages
 
             using (var webClient = new WebClient())
             {
-                string jsonString = webClient.DownloadString(Url);
-                Welcome[] welcome = Welcome.FromJson(jsonString);
+                string CityString = webClient.DownloadString(Url);
+                Welcome[] welcome = Welcome.FromJson(CityString);
                 ViewData["Welcome"] = welcome;
             }
 
