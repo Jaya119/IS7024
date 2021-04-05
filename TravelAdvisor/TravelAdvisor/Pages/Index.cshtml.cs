@@ -14,11 +14,9 @@ using System.Threading.Tasks;
 
 namespace TravelAdvisor.Pages
 
-{ 
-  
+{
     public class IndexModel : PageModel
     {
-
         public object BreweryAPI { get; private set; }
         [BindProperty]
         public string BreweryType { get; set; }
@@ -35,7 +33,7 @@ namespace TravelAdvisor.Pages
 
             IsSearchCity = false;
         }
-       
+
         public void OnPost()
         {
             string city = BreweryCity;
@@ -53,4 +51,5 @@ namespace TravelAdvisor.Pages
             IsSearchCity = true;
 
         }
-}}
+    }
+}
