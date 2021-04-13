@@ -29,12 +29,12 @@ namespace QuickType
         public static State[] FromJson(string json) => JsonConvert.DeserializeObject<State[]>(json, QuickType.Converter.Settings);
     }
 
-    public static class Serialize
+    public static class stateSerialize
     {
         public static string ToJson(this State[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
     }
 
-    internal static class Converter
+    internal static class stateConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
