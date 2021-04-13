@@ -52,7 +52,7 @@ namespace QuickType
         }
     }
 
-    public static class Serialize
+    public static class Serial
     {
         public static string ToJson(this Welcome[] self)
         {
@@ -60,7 +60,7 @@ namespace QuickType
         }
     }
 
-    internal static class Converter
+    internal static class Convert
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
@@ -69,7 +69,7 @@ namespace QuickType
             Converters =
             {
                 new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
+            }
         };
     }
 }

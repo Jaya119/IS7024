@@ -13,14 +13,11 @@ namespace TravelAdvisor.Pages
     {
         public void OnGet()
         {
-            using (var webClient = new WebClient())
-            {
-                string jsonString = webClient.DownloadString("https://worldpopulationreview.com/static/states/abbr-name-list.json");
-               
-                var state = State.FromJson(jsonString);
-                ViewData["State"] = state;
-                
-            }
+            using var webClient = new WebClient();
+            string jsonString = webClient.DownloadString("https://worldpopulationreview.com/static/states/abbr-name-list.json");
+
+            var state = State.FromJson(jsonString);
+            ViewData["State"] = state;
 
         }
     }

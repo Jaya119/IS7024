@@ -75,9 +75,9 @@
                     <input type="submit" value="Search for Breweries" class="btn btn-primary" />
                 </div>
             </form>
+</div>
 
-
-            @if (Model.isSearchCity)
+            @if (Model.IsSearchCity)
             {
                 <table class="table table-striped table-light">
                     <thead class="thead-dark">
@@ -95,8 +95,14 @@
                                 <td>@breweries.City</td>
                                 <td>@breweries.Phone</td>
                                 <td>@breweries.Name</td>
+
                             </tr>
                         }
+
+                            </tr>
+
+                        }
+             
                     </tbody>
                 </table>
             }
