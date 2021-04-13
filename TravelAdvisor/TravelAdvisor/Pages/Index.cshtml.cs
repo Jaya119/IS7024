@@ -23,7 +23,7 @@ namespace TravelAdvisor.Pages
 
         public new string Url { get; set; }
 
-
+        public bool IsCityNull { get; set; }
         public void OnGet()
         {
             using (var webClient = new WebClient())
@@ -40,23 +40,33 @@ namespace TravelAdvisor.Pages
         public void OnPost()
         {
             string city = BreweryCity;
-
-            Url = "https://api.openbrewerydb.org/breweries?by_city=" + city;
-
-
-            using (var webClient = new WebClient())
+            // Check whether city populated on screen
+            IsCityNull = string.IsNullOrEmpty(city);
+            // Fetch data from API only when city populated
+            if (!IsCityNull)
             {
+                Url = "https://api.openbrewerydb.org/breweries?by_city=" + city;
                 string brewery = webClient.DownloadString(Url);
                 Welcome[] welcome = Welcome.FromJson(brewery);
                 ViewData["Welcome"] = welcome;
             }
 
-            IsSearchCity = true;
+                using (var webClient = new WebClient())
+                {
+                    string jsonString = webClient.DownloadString(Url);
+                    Welcome[] welcome = Welcome.FromJson(jsonString);
+                    ViewData["Welcome"] = welcome;
+                }
 
+                IsSearchCity = true;
+            }
         }
+    }
+}
 
 }   }
 
     }
 }
+
 
