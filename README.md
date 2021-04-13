@@ -14,25 +14,14 @@ Do you remember when was your last vacation? Do you know where to go? Our Travel
 ---
 ## Data Feeds  
 - [US States](https://worldpopulationreview.com/states/state-abbreviations)  
-- [United Airline Data](https://data.world/adamhelsinger/united-airlines-data)
-- [Campgrounds in US and CANADA](https://data.world/caroline/campgrounds)
+- [Breweries in US](https://api.openbrewerydb.org/breweries)
 - [Hotel Reviews in US](https://data.world/datafiniti/hotel-reviews)  
 
 ---
-## FUNCTIONAL REQUIREMENTS:  
-REQUIREMENTS 1.0 : *Search for vacation destination*  
-
-**Scenario** 
-As a user interested to find a vacation destination, I want to search major cities in the world based on weather. 
-
-**Dependencies** 
-City search data are available and accessible. 
-
-
 REQUIREMENTS 1.1 : *Finding a Brewery*  
 
 **Scenario**
-As a user interested in knowing flight details, I want to search best possible flight fares for the trip.
+As a user interested in knowing finding a nice place to chill, I want to search best possible best breweries in the country.
 
 **Dependencies**
 Brewery Data are available and accessible. 
