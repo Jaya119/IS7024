@@ -33,7 +33,7 @@ namespace TravelAdvisor.Pages
                 var state = State.FromJson(stateSearch);
                 ViewData["State"] = state;
             }
-            isSearchCity = false;
+            IsSearchCity = false;
             IsSearchCity = false;
         }
 
@@ -46,15 +46,13 @@ namespace TravelAdvisor.Pages
             if (!IsCityNull)
             {
                 Url = "https://api.openbrewerydb.org/breweries?by_city=" + city;
-                string brewery = webClient.DownloadString(Url);
-                Welcome[] welcome = Welcome.FromJson(brewery);
-                ViewData["Welcome"] = welcome;
+
             }
 
                 using (var webClient = new WebClient())
-                {
-                    string jsonString = webClient.DownloadString(Url);
-                    Welcome[] welcome = Welcome.FromJson(jsonString);
+            {
+                string brewery = webClient.DownloadString(Url);
+                    Welcome[] welcome = Welcome.FromJson(brewery);
                     ViewData["Welcome"] = welcome;
                 }
 
@@ -62,11 +60,11 @@ namespace TravelAdvisor.Pages
             }
         }
     }
-}
 
-}   }
 
-    }
-}
+
+
+
+
 
 

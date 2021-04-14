@@ -12,79 +12,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <div class="container">
-        <div class="row py-lg-3">
-            <h2 class="display-4" style="color:darkblue">Book your next travel destination today!</h2>
-        </div>
-        <div class="row text-center">
-            <p class="lead">Happiness is a way of travel, let travel advisor choose your happiness.</p>
-        </div>
-    </div>
-    <div class="card-group">
-        <div class="card">
-
-            <img src="~/Images/eatery.jpg" class="card-img-top" alt="Buy" />
-            <div class="card-body">
-                <br />
-                <h5 class="card-title">Search by City</h5>
-                <p class="card-text">Any travel is incomplete without finding good eateries. Travel Advisory provides you the best eateries in each city.</p>
-                <form action="" method="POST" style="margin-top: 50px;">
-                    <div class="form-group">
-                        <label style="font-size:20px;" class="control-label" for="CountrySearch"><strong>Enter City</strong></label>
-                        <input type="text" class="form-control" name="BreweryCity" id="BreweryCity" style="width:50%" />
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Search for Eateries" class="btn btn-primary" />
-                    </div>
-                </form>
-                @if (Model.IsCityNull)
+    @if (Model.IsCityNull)
                 {
                   <div> No City Selected </div>
                 }
-            </div>
-
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    /* Style the search field */
-    form.example input[type=text] {
-        padding: 10px;
-        font-size: 17px;
-        border: 1px solid grey;
-        float: left;
-        width: 80%;
-        background: #f1f1f1;
-    }
-
-    /* Style the submit button */
-    form.example button {
-        float: left;
-        width: 20%;
-        padding: 10px;
-        background: #2196F3;
-        color: white;
-        font-size: 17px;
-        border: 1px solid grey;
-        border-left: none; /* Prevent double borders */
-        cursor: pointer;
-    }
-
-    form.example button:hover {
-            background: #0b7dda;
-    }
-
-
-    /* Clear floats */
-    form.example::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-
-</style>
-
+            
 <div class="container">
     <div class="row py-lg-3">
         <h2 class="display-4" style="color:darkblue">Book your next travel destination today!</h2>
@@ -95,7 +27,6 @@
 </div>
 <div class="card-group">
     <div class="card">
-
         <img src="~/Images/eatery.jpg" class="card-img-top" alt="Buy">
         <div class="text-center">
             <br />
@@ -110,9 +41,8 @@
                     <input type="submit" value="Search for Breweries" class="btn btn-primary" />
                 </div>
             </form>
-</div>
-
-
+        </div>
+    </div>
             @if (Model.IsSearchCity)
             {
                 <table class="table table-striped table-light">
@@ -123,93 +53,71 @@
                             <th>Name</th>
                         </tr>
                     </thead>
+                 
+                </table>
+                
+                <table>
                     <tbody>
-
                         @foreach (QuickType.Welcome breweries in Welcome)
                         {
                             <tr>
                                 <td>@breweries.City</td>
                                 <td>@breweries.Phone</td>
                                 <td>@breweries.Name</td>
-
                             </tr>
                         }
-
-                            </tr>
-
-                        }
-
                     </tbody>
                 </table>
             }
 
-            <img src="~/Images/us states.jpg" class="card-img-top" alt="Buy" />
-
-        <img src="~/Images/us states.jpg" class="card-img-top" alt="Buy">
+           
+<div class="card">
+    <img src="~/Images/us states.jpg" class="card-img-top" alt="USstates" />
+    <div class="card-body">
         <br />
-        <div class="text-center">
-            <h5 class="card-title">Search by State</h5>
-            <p class="card-text">You can find your favorite vacations spots and hotel reviews in various states</p>
-            <form method="get" class="" a href="https://worldpopulationreview.com/static/states/abbr-name-list.json">
-                <label for="country">Search</label>
-                <select id="state" name="state">
-                    @foreach (QuickType.State state in states)
-                    {
-                    <option value=@state.Abbreviation>@state.Name</option>
-                    }
-                </select>
-                <a href="/DataIntegration" class="btn btn-primary">Submit</a>
-            </form>
-            <br/>
-        </div>
+        <h5 class="card-title">Search by State</h5>
+        <p class="card-text">You can find your favorite vacations spots and hotel reviews in various states</p>
+        <form method="get" class="" a href="https://worldpopulationreview.com/static/states/abbr-name-list.json">
+
+            <label for="country">Search</label>
+            <select id="state" name="state">
+                <option value="IA">Iowa</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="KS">Kansas</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="ND">North Dakota</option>
+                <option value="NE">Nebraska</option>
+                <option value="OH">Ohio</option>
+                <option value="SD">South Dakota</option>
+                <option value="WI">Wisconsin</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NY">New York</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="VI">Virginia</option>
+                <option value="VT">Vermont</option>
+                <option value="WV">West Virgina</option>
+                <option value="AZ">Arizona</option>
+                <option value="CO">Colorado</option>
+                <option value="NM">New Mexico</option>
+            </select>
+            <a href="/DataIntegration" class="btn btn-primary">Submit</a>
+        </form>
     </div>
-    <div class="text-center">
-        <img src="~/Images/hotels.jpg" class="card-img-top" alt="Agents">
-        <div class="card-body">
-
-            <br />
-            <div class="text-center">
-                <h5 class="card-title">Search by State</h5>
-                <p class="card-text">You can find your favorite vacations spots and hotel reviews in various states</p>
-                <form method="get" class="" a href="https://worldpopulationreview.com/static/states/abbr-name-list.json">
-
-                    <label for="country">Search</label>
-                    <select id="state" name="state">
-                        <option value="IA">Iowa</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="KS">Kansas</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MO">Missouri</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="OH">Ohio</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MD">Maryland</option>
-                        <option value="ME">Maine</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NY">New York</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="VI">Virginia</option>
-                        <option value="VT">Vermont</option>
-                        <option value="WV">West Virgina</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="CO">Colorado</option>
-                        <option value="NM">New Mexico</option>
-                    </select>
-                    <a href="/DataIntegration" class="btn btn-primary">Submit</a>
-                </form>
-            </div>
-        </div>
-        <div class="card">
-            <img src="~/Images/hotels.jpg" class="card-img-top" alt="Agents" />
+</div>
+        
+    
+    <div class="card">
+            <img src="~/Images/hotels.jpg" class="card-img-top" alt="Hotel" />
             <div class="card-body">
                 <br />
                 <h5 class="card-title">Hotel Reviews</h5>
@@ -217,10 +125,10 @@
                 <a href="/Agents/List" class="btn btn-primary">Click here</a>
 
             </div>
-        </div>
+    </div>
 
         <div class="card">
-            <img src="~/Images/vacationspots.jpg" class="card-img-top" alt="Sales Office" />
+            <img src="~/Images/vacationspots.jpg" class="card-img-top" alt="Vacation" />
             <div class="card-body">
                 <h5 class="card-title">List of vacation Spots</h5>
                 <p class="card-text">TripAdvisor has done all work for you, you can find best vacation spots here.</p>
@@ -230,15 +138,3 @@
     </div>
 </body>
 </html>
-
-    <div class="text-center">
-        <img src="~/Images/vacationspots.jpg" class="card-img-top" alt="Sales Office">
-        <div class="card-body">
-            <h5 class="card-title">List of vacation Spots</h5>
-            <p class="card-text">TripAdvisor has done all work for you, you can find best vacation spots here.</p>
-            <a href="/SalesOffices/List" class="btn btn-primary">Click here</a>
-        </div>
-    </div>
-    </div>
-</div>
-
