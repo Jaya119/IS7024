@@ -1,33 +1,33 @@
-# Travel Advisor  
+## Travel Advisor  
 
 ##### Design Document
 
-###### Group Members: Jayashree Kodukula, Apoorva Navlay, Siva Praveena Tati
+###### Group Members: Jayashree Kodukula, Apoorva Navlay, Siva Praveena Tati  
 
 ## Introduction  
-Do you remember when was your last vacation? Do you know where to go? Our TravelAdvisor can help you choose a destination which provides information on Best Vacation Spots preferred by the Travellers.
+Do you remember when was your last vacation? Do you know where to go? Our TravelAdvisor can help you choose a destination which provides information on Best Vacation Spots preferred by the Travellor's.
 
-- Provides you State codes for easy search by category 
-- Breweries in US
+- Provides you state codes for easy search by category  
+- Best Breweries 
 - Hotel Reviews  
 ---
 ## Data Feeds  
-- [US States](https://worldpopulationreview.com/states/state-abbreviations)  
+- [US states](https://worldpopulationreview.com/static/states/abbr-name-list.json) 
 - [Breweries in US](https://api.openbrewerydb.org/breweries)
 - [Hotel Reviews in US](https://data.world/datafiniti/hotel-reviews)  
 
 ---
-REQUIREMENTS 1.1 : *Finding a Brewery*  
+## FUNCTIONAL REQUIREMENTS:   
 
+REQUIREMENTS 1.1 : *Find a Brewery*  
 **Scenario**
-As a user interested in knowing finding a nice place to chill, I want to search best possible best breweries in the country.
+As a user interested in knowing places to chill, I want to search best possible breweries in US.
 
 **Dependencies**
-Brewery Data are available and accessible. 
-   
-   
-REQUIREMENT 1.2 : *Hotel Reviews*  
+Brewery data are available and accessible. 
+ 
 
+REQUIREMENT 1.2 : *Booking a hotel*  
 **Scenario**
 As a user interested in Booking a Hotel, I want to know the Hotel Reviews in United States for my travel.
 
@@ -44,5 +44,7 @@ Hotel Reviews Data are available and accessible.
 
 3. **Integration Developer** – *Siva Praveena Tati* 
 
-##### Weekly Meetings: 
-Wednesday 3-4pm | Friday 3-4pm
+### Weekly Meetings:
+Wednesday 3-4pm  
+Friday 3-4pm
+
