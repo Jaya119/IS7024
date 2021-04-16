@@ -31,29 +31,7 @@
                         </div>
                     </form>
                 </div>
-                <style>
-                    table {
-                        border-collapse: separate;
-                        border-spacing: 0 15px;
-                    }
-
-                    th {
-                        background-color: #4287f5;
-                        color: white;
-                    }
-
-                    th,
-                    td {
-                        width: 700px;
-                        text-align: center;
-                        border: 1px solid black;
-                        padding: 5px;
-                    }
-
-                    h2 {
-                        color: #4287f5;
-                    }
-                </style>
+                    
                 @if (Model.IsSearchTimings)
                 {
                     <table class="table table-striped table-light">
@@ -64,23 +42,19 @@
                                 <th>City</th>
                             </tr>
                         </thead>
-
                     </table>
 
                     <table>
                         <tbody>
-
-
                             <tr>
-
                                 <td>@Timings.Results.Sunrise</td>
                                 <td>@Timings.Results.Sunset</td>
                             </tr>
-
                         </tbody>
                     </table>
                 }
             </div>
-
+        </div>
+    </div>
 </body>
 </html>

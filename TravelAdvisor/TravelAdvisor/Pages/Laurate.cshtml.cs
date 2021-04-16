@@ -9,6 +9,12 @@ namespace TravelAdvisor.Pages
 {
     public class LaurateModel : PageModel
     {
+        public bool IsSearchTimings { get; set; }
+
+        public LaurateModel(bool isSearchTimings)
+        {
+            IsSearchTimings = isSearchTimings;
+        }
         public void OnGet()
         {
         }

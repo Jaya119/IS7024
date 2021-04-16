@@ -80,3 +80,26 @@ form.example::after {
     clear: both;
     display: table;
 }
+
+/*Table styling*/
+table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+th {
+    background-color: #4287f5;
+    color: white;
+}
+
+th,
+td {
+    width: 700px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+h2 {
+    color: #4287f5;
+}
