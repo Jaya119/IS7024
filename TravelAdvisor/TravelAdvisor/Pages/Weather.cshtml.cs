@@ -28,8 +28,8 @@ namespace TravelAdvisor.Pages
 
         public void OnPost()
         {
-        double latitude = LatitudeId;
-        double longitude = LongitudeId;
+        double latitude = 23.5;
+        double longitude = 45.6;
             Url = "https://api.sunrise-sunset.org/json?lat=" + latitude + "&lng=" + longitude;
             using (var webClient = new WebClient())
             {

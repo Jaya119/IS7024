@@ -20,11 +20,6 @@ namespace TravelAdvisor.Pages
         public string BreweryCity { get; set; }        
         public bool IsSearchCity { get; set; }
 
-        public IndexModel(bool isSearchCity)
-        {
-            IsSearchCity = isSearchCity;
-        }
-
         public new string Url { get; set; }
         public bool IsCityNull { get; set; }
 
