@@ -18,6 +18,8 @@ namespace TravelAdvisor.Pages
 
         public double LatitudeId {get; set; }
 
+        public string Date { get; set; }
+
         public new string Url { get; set; }
 
         public bool IsSearchTimings { get; set; }
@@ -30,7 +32,8 @@ namespace TravelAdvisor.Pages
         {
         double latitude = 23.5;
         double longitude = 45.6;
-            Url = "https://api.sunrise-sunset.org/json?lat=" + latitude + "&lng=" + longitude;
+        string date = Date; 
+            Url = "https://api.sunrise-sunset.org/json?lat=" + latitude + "&lng=" + longitude + "date=" + date;
             using (var webClient = new WebClient())
             {
                 string timings = webClient.DownloadString(Url);
