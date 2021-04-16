@@ -10,15 +10,16 @@
 
     <h5>You can reach us out by following:</h5>
     <form method="post" enctype="multipart/form-data" asp-page="/Import" id="userform">
-
         <input name="FirstName" type="text" width="30" />
+        <br>
         <input name="LastName" type="text" width="30" />
+        <br>
         <input name="email" type="text" width="50" />
-    
+        <br>
         <input type="file" asp-for="Upload" />
         <input type="submit" />
     </form>
-
+    <br>
     <textarea name="Comment" form="userform">Enter text here...</textarea>
 
 </body>
