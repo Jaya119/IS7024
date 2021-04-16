@@ -8,14 +8,18 @@
 <body>
     <h1>@ViewData["Title"]</h1>
 
-    
-    <input id="Text1" type="text" />
+    <h5>You can reach us out by following:</h5>
+    <form method="post" enctype="multipart/form-data" asp-page="/Import" id="userform">
 
-    <input id="Submit1" type="submit" value="submit" />
-    <p>You can reach us out by following:</p>
-    <ol>
-        <li>Email us: query@traveladvisor.com</li>
-        <li>Call us: 513123456</li>
-    </ol>
+        <input name="FirstName" type="text" width="30" />
+        <input name="LastName" type="text" width="30" />
+        <input name="email" type="text" width="50" />
+    
+        <input type="file" asp-for="Upload" />
+        <input type="submit" />
+    </form>
+
+    <textarea name="Comment" form="userform">Enter text here...</textarea>
+
 </body>
 </html>

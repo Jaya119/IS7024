@@ -86,12 +86,10 @@ table {
     border-collapse: separate;
     border-spacing: 0 15px;
 }
-
 th {
     background-color: #4287f5;
-    color: white;
+    color: lightblue;
 }
-
 th,
 td {
     width: 700px;
@@ -99,7 +97,6 @@ td {
     border: 1px solid black;
     padding: 5px;
 }
-
 h2 {
     color: #4287f5;
 }
