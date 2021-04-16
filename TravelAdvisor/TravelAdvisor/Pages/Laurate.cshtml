@@ -1,0 +1,86 @@
+﻿@page
+@model TravelAdvisor.Pages.LaurateModel
+@{
+
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <div class="card-group">
+        <div class="card">
+            <div class="container">
+                <div class="jumbotron text-center" style="background-color:beige" src="~/Images/nobel.jpg">
+                    <h1 class="display-4" style="color:darkblue"><strong>Nobel Laureate</strong></h1>
+                    <img alt="logo" src="~/Images/sunset.jpg" class="img-fluid" width="750" height="750">
+                </div>
+                <div class="text-center">
+                    <br />
+                    <h5 class="card-title">NOBEL LAUREATE</h5>
+                    <p class="card-text">Are you a lover of sunrise or sunset? Enter you location details to know the timings of sunrise or sunset wherever you are and enjoy those magical moments!</p>
+                    <form action="" method="POST" style="margin-top: 50px;">
+                        <div class="form-group">
+                            <label style="font-size:20px;" class="control-label" for="TimingSearch"><strong>Enter Latitude</strong></label>
+                            <input type="text" class="form-control" name="LatitudeId" id="LatitudeId" style="width:50%; margin-left:auto; margin-right:auto" />
+                            <label style="font-size:20px;" class="control-label" for="LongitudeSearch"><strong>Enter Longitude</strong></label>
+                            <input type="text" class="form-control" name="LongitudeId" id="LongitudeId" style="width:50%; margin-left:auto; margin-right:auto" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Search for Timings" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                <style>
+                    table {
+                        border-collapse: separate;
+                        border-spacing: 0 15px;
+                    }
+
+                    th {
+                        background-color: #4287f5;
+                        color: white;
+                    }
+
+                    th,
+                    td {
+                        width: 700px;
+                        text-align: center;
+                        border: 1px solid black;
+                        padding: 5px;
+                    }
+
+                    h2 {
+                        color: #4287f5;
+                    }
+                </style>
+                @if (Model.IsSearchTimings)
+                {
+                    <table class="table table-striped table-light">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Date of Birth</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+
+                    <table>
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>@Timings.Results.Sunrise</td>
+                                <td>@Timings.Results.Sunset</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                }
+            </div>
+
+</body>
+</html>

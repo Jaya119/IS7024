@@ -19,24 +19,21 @@ namespace TravelAdvisor.Pages
         [BindProperty]
         public string BreweryCity { get; set; }
 
+        
         public bool IsSearchCity { get; set; }
+
+      
 
         public new string Url { get; set; }
 
         public bool IsCityNull { get; set; }
+
         public void OnGet()
         {
-            using (var webClient = new WebClient())
-            {
-                string stateSearch = webClient.DownloadString("https://worldpopulationreview.com/static/states/abbr-name-list.json");
 
-                var state = State.FromJson(stateSearch);
-                ViewData["State"] = state;
-            }
-            IsSearchCity = false;
-            IsSearchCity = false;
         }
-
+        
+       
         public void OnPost()
         {
             string city = BreweryCity;
@@ -58,6 +55,9 @@ namespace TravelAdvisor.Pages
 
                 IsSearchCity = true;
             }
+
+        
+     
         }
     }
 
