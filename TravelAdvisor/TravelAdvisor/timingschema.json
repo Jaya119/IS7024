@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "results": {
+        "sunrise": "10:55:56 AM",
+        "sunset": "12:18:51 AM",
+        "solar_noon": "5:37:23 PM",
+        "day_length": "13:22:55",
+        "civil_twilight_begin": "10:27:51 AM",
+        "civil_twilight_end": "12:46:55 AM",
+        "nautical_twilight_begin": "9:54:05 AM",
+        "nautical_twilight_end": "1:20:41 AM",
+        "astronomical_twilight_begin": "9:18:30 AM",
+        "astronomical_twilight_end": "1:56:16 AM"
+      },
+      "status": "OK"
+    }
+  ],
+  "required": [
+    "results",
+    "status"
+  ],
+  "properties": {
+    "results": {
+      "$id": "#/properties/results",
+      "type": "object",
+      "title": "The results schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "sunrise": "10:55:56 AM",
+          "sunset": "12:18:51 AM",
+          "solar_noon": "5:37:23 PM",
+          "day_length": "13:22:55",
+          "civil_twilight_begin": "10:27:51 AM",
+          "civil_twilight_end": "12:46:55 AM",
+          "nautical_twilight_begin": "9:54:05 AM",
+          "nautical_twilight_end": "1:20:41 AM",
+          "astronomical_twilight_begin": "9:18:30 AM",
+          "astronomical_twilight_end": "1:56:16 AM"
+        }
+      ],
+      "required": [
+        "sunrise",
+        "sunset",
+        "solar_noon",
+        "day_length",
+        "civil_twilight_begin",
+        "civil_twilight_end",
+        "nautical_twilight_begin",
+        "nautical_twilight_end",
+        "astronomical_twilight_begin",
+        "astronomical_twilight_end"
+      ],
+      "properties": {
+        "sunrise": {
+          "$id": "#/properties/results/properties/sunrise",
+          "type": "string",
+          "title": "The sunrise schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "10:55:56 AM"
+          ]
+        },
+        "sunset": {
+          "$id": "#/properties/results/properties/sunset",
+          "type": "string",
+          "title": "The sunset schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "12:18:51 AM"
+          ]
+        },
+        "solar_noon": {
+          "$id": "#/properties/results/properties/solar_noon",
+          "type": "string",
+          "title": "The solar_noon schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "5:37:23 PM"
+          ]
+        },
+        "day_length": {
+          "$id": "#/properties/results/properties/day_length",
+          "type": "string",
+          "title": "The day_length schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "13:22:55"
+          ]
+        },
+        "civil_twilight_begin": {
+          "$id": "#/properties/results/properties/civil_twilight_begin",
+          "type": "string",
+          "title": "The civil_twilight_begin schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "10:27:51 AM"
+          ]
+        },
+        "civil_twilight_end": {
+          "$id": "#/properties/results/properties/civil_twilight_end",
+          "type": "string",
+          "title": "The civil_twilight_end schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "12:46:55 AM"
+          ]
+        },
+        "nautical_twilight_begin": {
+          "$id": "#/properties/results/properties/nautical_twilight_begin",
+          "type": "string",
+          "title": "The nautical_twilight_begin schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "9:54:05 AM"
+          ]
+        },
+        "nautical_twilight_end": {
+          "$id": "#/properties/results/properties/nautical_twilight_end",
+          "type": "string",
+          "title": "The nautical_twilight_end schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "1:20:41 AM"
+          ]
+        },
+        "astronomical_twilight_begin": {
+          "$id": "#/properties/results/properties/astronomical_twilight_begin",
+          "type": "string",
+          "title": "The astronomical_twilight_begin schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "9:18:30 AM"
+          ]
+        },
+        "astronomical_twilight_end": {
+          "$id": "#/properties/results/properties/astronomical_twilight_end",
+          "type": "string",
+          "title": "The astronomical_twilight_end schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "1:56:16 AM"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The status schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "OK"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
